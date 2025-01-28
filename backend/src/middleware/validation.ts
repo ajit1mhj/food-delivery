@@ -17,8 +17,8 @@ export const validateMyUserRequest = [
     handelValidationErrors,
 ]
 
-export const validateMyResturantRequest = [
-    body("resturantName").notEmpty().withMessage("Restrant name is required"),
+export const validateMyRestaurantRequest = [
+    body("restaurantName").notEmpty().withMessage("Restrant name is required"),
     body("city").notEmpty().withMessage("city name is required"),
     body("country").notEmpty().withMessage("country name is required"),
     body("delivaryPrice").isFloat({min:0}).withMessage("Delivery price must be a positive number"),
