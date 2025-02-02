@@ -1,10 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@radix-ui/react-dropdown-menu";
+import { DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from "@radix-ui/react-dropdown-menu";
 import { Separator } from "@radix-ui/react-separator";
 import { CircleUser } from "lucide-react"; // Use a valid icon from lucide-react
 import { Button } from "./ui/button";

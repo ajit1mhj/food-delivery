@@ -98,7 +98,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
 
     formData.append(
       "deliveryPrice",
-      (formDataJson.deliveryPrice * 100).toString()
+      (formDataJson.deliveryPrice).toString()
     );
     formData.append(
       "estimatedDeliveryTime",
@@ -111,7 +111,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
       formData.append(`menuItems[${index}][name]`, menuItem.name);
       formData.append(
         `menuItems[${index}][price]`,
-        (menuItem.price * 100).toString()
+        (menuItem.price).toString()
       );
     });
 
