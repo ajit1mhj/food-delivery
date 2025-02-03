@@ -9,7 +9,7 @@ const Header = ()=>{
                 <Link 
                 to="/"
                 className="text-2xl font-bold tracking-tight text-lightblue-500">
-                FoodDelivery
+                QuickFood
                 </Link>
                 <div className="md:hidden">
                     <MobileNav />

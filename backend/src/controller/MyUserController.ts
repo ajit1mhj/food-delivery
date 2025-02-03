@@ -1,4 +1,3 @@
-import { create } from "domain";
 import { Request,Response } from "express";
 import User from "../models/user";
 
@@ -39,7 +38,7 @@ const createCurrentUser = async (req:Request,res:Response): Promise<any>=>{
 };
 const updateCurrentUser = async (req:Request,res:Response):Promise<any>=>{
     try{
-        const {name,addressLine1,country , city}=req.body;
+        const {name,addressLine1,country , city,phoneNumber}=req.body;
         const user = await User.findById(req.userId);
 
         if(!user){
@@ -48,7 +47,8 @@ const updateCurrentUser = async (req:Request,res:Response):Promise<any>=>{
         user.name= name;
         user.addressLine1= addressLine1;
         user.city= city;
-        user.Country=country;
+        user.country=country;
+        user.phoneNumber = phoneNumber;
         await user.save();
         res.send(user);
     }catch(error){

@@ -14,12 +14,12 @@ type Props ={
 const OrderSummary =({restaurant,cartItems,removeFromCart}:Props)=>{
 
     const getTotalCost =()=>{
-         const TotalInNrs = cartItems.reduce(
+         const TotalInNPR = cartItems.reduce(
             (total,cartItems) => total + cartItems.price * cartItems.quantity,0)
 
-            const totalWithDelivery = TotalInNrs + restaurant.deliveryPrice
+            const totalWithDelivery = (TotalInNPR + restaurant.deliveryPrice)
 
-            return totalWithDelivery
+            return totalWithDelivery 
     }
 
 
@@ -28,7 +28,7 @@ const OrderSummary =({restaurant,cartItems,removeFromCart}:Props)=>{
         <CardHeader>
             <CardTitle className="text-2xl font-bold tracking-tight flex justify-between">
             <span>Your Order</span>
-            <span>NRs. {getTotalCost()}</span>
+            <span>NPR {getTotalCost()}</span>
             </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-5">
@@ -44,14 +44,14 @@ const OrderSummary =({restaurant,cartItems,removeFromCart}:Props)=>{
                     <span className="flex items-center gap-1">
                         <Trash className="cursor-pointer" color="red" size={20}
                         onClick={()=>removeFromCart(item)}/>
-                    NRs. {(item.price * item.quantity)}
+                    NPR {(item.price * item.quantity)}
                     </span>
                 </div>
             ))}
             <Separator/>
             <div className="flex justify-between">
                 <span>Delivery</span>
-                <span>Nrs{(restaurant.deliveryPrice)}</span>
+                <span>NPR {(restaurant.deliveryPrice)}</span>
             </div>
             <Separator/>
         </CardContent>

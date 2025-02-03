@@ -15,7 +15,6 @@ export const cuisineList = [
     "Pasta",
     "Pizza",
     "Salads",
-    "Desserts",
     "Tacos",
     "Vegan",
   ];

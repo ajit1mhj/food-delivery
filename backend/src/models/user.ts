@@ -17,8 +17,11 @@ const userSchema = new mongoose.Schema({
     city:{
         type: String,
     },
-    Country:{
+    country:{
         type: String,
+    },
+    phoneNumber:{
+        type: Number,
     },
 })
 
